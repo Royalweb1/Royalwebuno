@@ -1,0 +1,371 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo del Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('../img/logo-fondo-casino.jpg') no-repeat right center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+/* Header Principal */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90vh;
+  padding: 20px;
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.logo-payaso {
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 5px #ff00ff)
+          drop-shadow(0 0 10px #ff00ff)
+          drop-shadow(0 0 20px #ff00ff);
+  animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  color: #fefefe;
+  text-shadow: 0 0 10px #4d4a4a, 0 0 20px #000000;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  color: #fffbfb;
+  text-shadow: 0 0 5px #090909, 0 0 10px #0c0c0c, 0 0 15px #0e0d0d;
+  animation: neon-soft 2s ease-in-out infinite alternate;
+}
+
+/* Nueva animación */
+@keyframes neon-soft {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #0f0f0f, 0 0 15px #b42a94;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #b330da, 0 0 30px #56034a;
+  }
+}
+
+
+.hero-content p {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #0d0d0d, 0 0 10px #060606;
+}
+
+/* Botón principal */
+.btn-primary {
+  background-color: #ac1eae;
+  padding: 12px 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.3s, text-shadow 0.3s;
+  text-shadow: 0 0 5px #fffffe, 0 0 10px #000000;
+}
+
+.btn-primary:hover {
+  background-color: rgb(160, 26, 133);
+  text-shadow: 0 0 20px #ebe8e5, 0 0 30px #f1eee9;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(165, 26, 168, 0.973);
+  padding: 10px 30px;
+  border-radius: 50px;
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 15px #eae9e6;
+}
+
+.navbar a {
+  color: #f4eff4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+  text-shadow: 0 0 5px #e3e1dd, 0 0 10px #ecebe9;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 15px #ffffff, 0 0 20px #3822ca;
+}
+
+/* Secciones generales */
+.section, .seccion {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Juegos y Pagos */
+.juegos-grid, .contenedor-beneficios, .contenedor-pagos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.juegos-grid img, .contenedor-beneficios img, .contenedor-pagos img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Beneficios y Pagos Cards */
+.beneficio, .medio {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beneficio:hover, .medio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #191919;
+}
+
+.beneficio img, .medio img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 8px #a119a6);
+  animation: flotar 4s ease-in-out infinite;
+}
+
+/* Contacto */
+.contacto p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+/* WhatsApp flotante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Animaciones */
+@keyframes neon-glow {
+  from {
+    filter: drop-shadow(0 0 5px #a70da7) drop-shadow(0 0 10px #a920a9);
+  }
+  to {
+    filter: drop-shadow(0 0 15px #a514a5) drop-shadow(0 0 25px #a516a5);
+  }
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .logo-payaso {
+    width: 100px;
+  }
+
+  .navbar {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .beneficio img, .medio img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-position: center top;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .logo-payaso {
+    width: 130px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .beneficio img, .medio img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-position: center top;
+  }
+}
+
+/* BOTÓN WHATSAPP CREATIVO NEÓN + HOVER y TOQUE */
+.btn-whatsapp.neon-boton {
+  position: relative;
+  background: #101010;
+  color: #faf3f3;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.4s ease-in-out;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 15px #25D366, 0 0 30px #25D366;
+}
+
+.btn-whatsapp.neon-boton::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, #25D366, #00ffcc, #6600ff, #ff00cc, #25D366);
+  animation: spinBorder 3s linear infinite;
+  z-index: 0;
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(3px);
+}
+
+.btn-whatsapp.neon-boton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 40px;
+  z-index: -1;
+}
+
+/* Efecto al pasar el mouse (hover) o tocar en móviles */
+.btn-whatsapp.neon-boton:hover,
+.btn-whatsapp.neon-boton:active {
+  background: #00ffcc;
+  color: #000;
+  box-shadow: 0 0 25px #00ffcc, 0 0 50px #25D366;
+  transform: scale(1.05);
+}
+
+/* ANIMACIÓN BORDE GIRATORIO */
+@keyframes spinBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.section, .seccion {
+  padding: 30px 15px;
+}
