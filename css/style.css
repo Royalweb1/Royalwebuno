@@ -46,14 +46,22 @@ body::before {
   padding: 1rem;
 }
 
+/* Estilo para la imagen del logo del payaso */
 .logo-payaso {
-  width: 150px;
-  height: auto;
-  margin-bottom: 1rem;
+  width: 600px;  /* Tamaño original para dispositivos pequeños (móviles) */
+  height: auto;  /* Mantiene la proporción de la imagen */
+  margin-bottom: -2rem;
   filter: drop-shadow(0 0 5px #ff00ff)
           drop-shadow(0 0 10px #ff00ff)
           drop-shadow(0 0 20px #ff00ff);
   animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Estilo para pantallas más grandes (computadora) */
+@media (min-width: 768px) {
+  .logo-payaso {
+    width: 200px;  /* Agranda el logo para pantallas grandes */
+  }
 }
 
 .hero-content h2 {
@@ -63,13 +71,7 @@ body::before {
   text-shadow: 0 0 10px #4d4a4a, 0 0 20px #000000;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  margin: 0.5rem 0;
-  color: #fffbfb;
-  text-shadow: 0 0 5px #090909, 0 0 10px #0c0c0c, 0 0 15px #0e0d0d;
-  animation: neon-soft 2s ease-in-out infinite alternate;
-}
+
 
 /* Nueva animación */
 @keyframes neon-soft {
@@ -278,7 +280,7 @@ body::before {
   }
 
   .hero-content p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .logo-payaso {
@@ -304,7 +306,7 @@ body::before {
 /* BOTÓN WHATSAPP CREATIVO NEÓN + HOVER y TOQUE */
 .btn-whatsapp.neon-boton {
   position: relative;
-  background: #101010;
+  background: #07b710;
   color: #faf3f3;
   padding: 14px 28px;
   font-size: 1.1rem;
@@ -368,4 +370,57 @@ body::before {
 
 .section, .seccion {
   padding: 30px 15px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-weight: 900;
+  color: #FFD700;
+  text-shadow:
+    2px 2px 0 #4a0080,
+    4px 4px 0 #000000;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.linea-arriba {
+  font-size: 5rem;
+  display: block;
+  letter-spacing: -3px;
+  margin-bottom: -40px;
+}
+
+.linea-abajo {
+  font-size: 10rem;
+  display: block;
+  letter-spacing: -10px;
+  .contenido p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .linea-arriba {
+    font-size: 8vw;  /* Usar vw para un ajuste más dinámico */
+     margin-bottom: -50px;
+    
+  }
+
+  .linea-abajo {
+    font-size: 6vw;  /* Usar vw para un ajuste más dinámico */
+  }
+}
+
+@media (max-width: 480px) {
+  .linea-arriba {
+    font-size: 10vw;  /* Ajuste más grande para dispositivos pequeños */
+  }
+
+  .linea-abajo {
+    font-size: 25vw;  /* Ajuste más grande para dispositivos pequeños */
+  }
 }
